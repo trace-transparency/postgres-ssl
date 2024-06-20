@@ -15,4 +15,4 @@ RUN chmod +x /usr/local/bin/init-ssl.sh
 RUN chmod +x /usr/local/bin/wrapper.sh
 
 ENTRYPOINT ["wrapper.sh"]
-CMD ["postgres", "--port=5432"]
+CMD ["postgres", "--port=5432", "-c", "jit=off"]
